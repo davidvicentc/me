@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Layout from "../Layout";
-import { firebaseDatabase } from "../../initializers/firebase";
+import Layout from "../../Layout";
+import { firebaseDatabase } from "../../../initializers/firebase";
 
 /*
  <form onSubmit={this.handleSubmit}>
@@ -56,15 +56,7 @@ class Home extends Component {
 		}
 	}
 	render() {
-		return (
-			<Layout>
-				<div className="row">
-					<div className="card mx-auto card-orange mt-5">
-						{this.renderText()}
-					</div>
-				</div>
-			</Layout>
-		);
+		return <Layout>{this.renderText()}</Layout>;
 	}
 }
 export default Home;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Layout from "../../Layout";
-import { firebaseDatabase } from "../../../initializers/firebase";
+import { firebaseDatabase, firebaseAuth } from "../../../initializers/firebase";
 
 /*
  <form onSubmit={this.handleSubmit}>
@@ -28,8 +28,10 @@ class Home extends Component {
 			isLoading: false
 		};
 	}
+
 	componentWillMount() {
 		this.handleInformation();
+		this.setState({ user: firebaseAuth().currentUser });
 	}
 
 	handleInformation() {
@@ -49,6 +51,11 @@ class Home extends Component {
 		} else {
 			return (
 				<div>
+					<img
+						className="img-dvicent"
+						src={this.state.information.imgUrl}
+						alt={this.state.information.titles}
+					/>
 					<h1>{this.state.information.title}</h1>
 					<p>{this.state.information.description}</p>
 				</div>

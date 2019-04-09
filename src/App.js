@@ -9,8 +9,8 @@ import {
 import { firebaseAuth } from "./initializers/firebase";
 import Home from "./components/pages/Home/";
 import Login from "./components/pages/Login/";
-import Admin from "./components/pages/Admin/"
-import Layout from './components/Layout'
+import Admin from "./components/pages/Admin/";
+import Layout from "./components/Layout";
 
 import "./App.css";
 
@@ -93,7 +93,11 @@ class App extends Component {
 		) : (
 			<Router>
 				<Switch>
-					<Route exact path="/" component={() => <Home loading={this.state.loading} />} />
+					<Route
+						exact
+						path="/"
+						component={() => <Home loading={this.state.loading} />}
+					/>
 					<PublicRoute
 						authed={this.state.authed}
 						path="/login"
@@ -104,8 +108,8 @@ class App extends Component {
 						path="/admin"
 						component={Admin}
 					/>
-					<Route path="**" component={() => <h1>404</h1>}/>
-					<Route path="" component={() => <h1>404</h1>}/>
+					<Route path="**" component={() => <h1>404</h1>} />
+					<Route path="" component={() => <h1>404</h1>} />
 				</Switch>
 			</Router>
 		);

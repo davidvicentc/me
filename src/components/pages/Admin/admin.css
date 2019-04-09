@@ -1,0 +1,9 @@
+.btn-dvicent {
+	color: white;
+    border: 2px solid rgb(255, 125, 48);
+    border-radius: 5px;
+}
+
+.btn-dvicent:hover {
+	background-color: #fff;
+}

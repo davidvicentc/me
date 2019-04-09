@@ -9,8 +9,10 @@ import {
 import { firebaseAuth } from "./initializers/firebase";
 import Home from "./components/pages/Home/";
 import Login from "./components/pages/Login/";
+import Admin from "./components/pages/Admin/"
+import Layout from './components/Layout'
 
-import "./app.css";
+import "./App.css";
 
 const PrivateRoute = ({ component: Component, authed, rest }) => (
 	<Route
@@ -37,7 +39,7 @@ const PublicRoute = ({ component: Component, authed, rest }) => (
 			authed === false ? (
 				<Component {...props} />
 			) : (
-				<Redirect to="/me/ordep-admin" />
+				<Redirect to="/admin" />
 			)
 		}
 	/>
@@ -85,11 +87,13 @@ class App extends Component {
 
 	render() {
 		return this.state.loading ? (
-			<h1>Cargando</h1>
+			<Layout>
+				<h1>Cargando</h1>
+			</Layout>
 		) : (
 			<Router>
 				<Switch>
-					<Route exact path="/" component={Home} />
+					<Route exact path="/" component={() => <Home loading={this.state.loading} />} />
 					<PublicRoute
 						authed={this.state.authed}
 						path="/login"
@@ -98,8 +102,10 @@ class App extends Component {
 					<PrivateRoute
 						authed={this.state.authed}
 						path="/admin"
-						component={() => <h1>hola admin</h1>}
+						component={Admin}
 					/>
+					<Route path="**" component={() => <h1>404</h1>}/>
+					<Route path="" component={() => <h1>404</h1>}/>
 				</Switch>
 			</Router>
 		);

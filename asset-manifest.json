@@ -1,13 +1,13 @@
 {
-  "main.css": "/dvicent/static/css/main.b72cbf8b.chunk.css",
-  "main.js": "/dvicent/static/js/main.19953dde.chunk.js",
-  "main.js.map": "/dvicent/static/js/main.19953dde.chunk.js.map",
+  "main.css": "/dvicent/static/css/main.afa598ea.chunk.css",
+  "main.js": "/dvicent/static/js/main.0c54683b.chunk.js",
+  "main.js.map": "/dvicent/static/js/main.0c54683b.chunk.js.map",
   "runtime~main.js": "/dvicent/static/js/runtime~main.928fc5cd.js",
   "runtime~main.js.map": "/dvicent/static/js/runtime~main.928fc5cd.js.map",
   "static/js/2.9afbdcde.chunk.js": "/dvicent/static/js/2.9afbdcde.chunk.js",
   "static/js/2.9afbdcde.chunk.js.map": "/dvicent/static/js/2.9afbdcde.chunk.js.map",
   "index.html": "/dvicent/index.html",
-  "precache-manifest.eef884779e13eaa38b7e81344c389c3a.js": "/dvicent/precache-manifest.eef884779e13eaa38b7e81344c389c3a.js",
+  "precache-manifest.cf5d38745c658ec976a2821a069bd0da.js": "/dvicent/precache-manifest.cf5d38745c658ec976a2821a069bd0da.js",
   "service-worker.js": "/dvicent/service-worker.js",
-  "static/css/main.b72cbf8b.chunk.css.map": "/dvicent/static/css/main.b72cbf8b.chunk.css.map"
+  "static/css/main.afa598ea.chunk.css.map": "/dvicent/static/css/main.afa598ea.chunk.css.map"
 }
